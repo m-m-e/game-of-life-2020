@@ -1,0 +1,25 @@
+<table class="grid">
+  <tbody>
+    <tr *ngFor="let row of board.initialState" class="grid-rows">
+      <td *ngFor="let cell of row" class="cell" [class]="{'alive': cell.isAlive, 'dead': !cell.isAlive}">
+        <button (click)="checkCellStatus(cell)" class="button"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="selectedCell" class="selected-info">
+  <span>current state: {{ selectedCell.isAlive ? 'Alive' : 'Dead' }}</span>
+  <span>location:
+    <span>{{ selectedCell.location.x }}</span> ,
+    <span>{{ selectedCell.location.y }}</span>
+  </span>
+  <span>Neighbours:
+    <div *ngFor="let n of selectedCell.neighbours">
+      <span>{{ n.location.x }}</span> ,
+      <span>{{ n.location.y }}</span>
+    </div>
+  </span>
+
+
+</div>

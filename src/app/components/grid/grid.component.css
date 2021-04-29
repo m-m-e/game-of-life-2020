@@ -1,0 +1,30 @@
+.grid {
+  max-width: 50%;
+  margin: auto;
+}
+
+.grid-rows {
+  height: 50px;
+}
+
+.cell {
+  border: 1px solid black;
+  width: 50px;
+  text-align: center;
+}
+
+.alive {
+  background: black;
+  color: white;
+}
+
+.selected-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  height: 40px;
+  width: 100%;
+  background: transparent;
+}
